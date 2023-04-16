@@ -20,7 +20,7 @@ body{
   letter-spacing: 5px;
 }
 
-.days, .hours {
+.days {
   display: inline-block;
   padding: 20px;
   width: 100px;
@@ -28,11 +28,6 @@ body{
 }
 
 .days {
-  background: #eeeeee;
-  color: #183059;
-}
-
-.hours {
   background: #eeeeee;
   color: #183059;
 }
@@ -83,8 +78,6 @@ body{
 
     <div class="days"> 
         <div id="days" class="numbers "> </div>days</div> 
-      <div class="hours"> 
-        <div  id="hours" class="numbers"> </div>hours</div> 
       </div>
 
 </div>
@@ -104,9 +97,6 @@ let timer = setInterval(function() {
   // get the difference
   const diff = myDate - today;
 
-  // math
-  let days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 
   // display
   document.getElementById("days").innerHTML=days
